@@ -16,17 +16,17 @@ from time import sleep
 from multiprocessing import cpu_count
 
 
-
+logging.getLogger("urllib3").setLevel(logging.WARNING)
 if len(sys.argv) == 2:
     if sys.argv[1] == '--debug' or sys.argv[1] == '-d':
-        logging.basicConfig(level=logging.DEBUG, format=f'({colorama.Fore.MAGENTA + colorama.Style.BRIGHT}%(funcName)s %(levelname)s{colorama.Fore.RESET + colorama.Style.RESET_ALL + colorama.Back.RESET}) [%(asctime)s, %(lineno)d] %(message)s')
+        logging.basicConfig(level=logging.DEBUG, format=f'[{colorama.Fore.MAGENTA + colorama.Style.BRIGHT}%(funcName)s %(levelname)s{colorama.Fore.RESET + colorama.Style.RESET_ALL + colorama.Back.RESET}] [%(asctime)s, %(lineno)d] %(message)s')
 
     else:
-        logging.basicConfig(level=logging.DEBUG, format=f'({colorama.Fore.MAGENTA + colorama.Style.BRIGHT}%(funcName)s %(levelname)s{colorama.Fore.RESET + colorama.Style.RESET_ALL + colorama.Back.RESET}) [%(asctime)s, %(lineno)d] %(message)s')
+        logging.basicConfig(level=logging.DEBUG, format=f'[{colorama.Fore.MAGENTA + colorama.Style.BRIGHT}%(funcName)s %(levelname)s{colorama.Fore.RESET + colorama.Style.RESET_ALL + colorama.Back.RESET}] [%(asctime)s, %(lineno)d] %(message)s')
 
 else:
     logging.basicConfig(level=logging.INFO,
-                        format=f'({colorama.Fore.MAGENTA + colorama.Style.BRIGHT}%(funcName)s{colorama.Fore.RESET + colorama.Style.RESET_ALL + colorama.Back.RESET} %(levelname)s) [%(asctime)s, %(lineno)d] %(message)s')
+                        format=f'[{colorama.Fore.MAGENTA + colorama.Style.BRIGHT}%(funcName)s{colorama.Fore.RESET + colorama.Style.RESET_ALL + colorama.Back.RESET} %(levelname)s] [%(asctime)s, %(lineno)d] %(message)s')
 
 
 

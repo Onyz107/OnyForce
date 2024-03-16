@@ -25,6 +25,7 @@ def get_header_with_random_user_agent():
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
+
 class Initiate_attack:
     def __init__(self, tor: bool, fields: dict, field_to_attack: str, website: str, condition: str, number_of_threads: int, passwords: list):
         self.tor = tor
@@ -127,7 +128,7 @@ class Initiate_attack:
             with concurrent.futures.ThreadPoolExecutor(max_workers=self.number_of_threads+1) as executor:
                 _ = executor.map(self.make_request, range(self.number_of_threads+1))
 
-                if self.timed_out_passwords:
+                if self.timeouts:
                     logging.info(f'{self.BRIGHT}{self.CYAN}[!] Finished with the passwords however there are some passwords that could not have been requested because of timeouts retrying them{self.RESET}')
                     for password in self.timed_out_passwords:
                         min_queue = min(self.queues, key=lambda q: q.qsize())
