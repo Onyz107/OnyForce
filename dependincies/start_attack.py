@@ -77,9 +77,12 @@ class Initiate_attack:
             try:
                 password = self.queues[thread_number].get(timeout=1)
             except queue.Empty:
+                logging.debug(f'Queue is empty for thread number {thread_number}')
                 # No more passwords to process, check if all threads are done
                 if all(q.empty() for q in self.queues):
+                    logging.debug('All queues are empty')
                     break
+                
                 continue
 
             fields[self.field_to_attack] = password
