@@ -82,7 +82,7 @@ class Initiate_attack:
                 if all(q.empty() for q in self.queues):
                     logging.debug('All queues are empty')
                     break
-                
+
                 continue
 
             fields[self.field_to_attack] = password
@@ -95,7 +95,7 @@ class Initiate_attack:
                 # open('website.html', 'w').write(response.text)
             except (requests.Timeout, requests.exceptions.ConnectionError, requests.exceptions.ConnectTimeout):
                 self.timeouts += 1
-                logging.debug(str(password) + 'Timed-out')
+                logging.debug(str(password) + 'Timed-out\n')
                 self.timed_out_passwords.append(password)
                 continue
 
