@@ -95,7 +95,7 @@ class Initiate_attack:
                 # open('website.html', 'w').write(response.text)
             except (requests.Timeout, requests.exceptions.ConnectionError, requests.exceptions.ConnectTimeout):
                 self.timeouts += 1
-                logging.debug(str(password) + 'Timed-out\n')
+                logging.debug(str(password) + ' Timed-out\n')
                 self.timed_out_passwords.append(password)
                 continue
 
@@ -129,15 +129,20 @@ class Initiate_attack:
 
         while True:
             with concurrent.futures.ThreadPoolExecutor(max_workers=self.number_of_threads+1) as executor:
-                _ = executor.map(self.make_request, range(self.number_of_threads+1))
+                futures = [executor.submit(self.make_request, i) for i in range(self.number_of_threads + 1)]
+                concurrent.futures.wait(futures)
 
-                if self.timeouts:
+                logging.debug('Checking for timeouts')
+                if self.timeouts and self.run:
                     logging.info(f'{self.BRIGHT}{self.CYAN}[!] Finished with the passwords however there are some passwords that could not have been requested because of timeouts retrying them{self.RESET}')
+
                     for password in self.timed_out_passwords:
                         min_queue = min(self.queues, key=lambda q: q.qsize())
                         min_queue.put(password)
                     self.timed_out_passwords = []
+                    self.timeouts = 0
                     continue
+
                 else:
                     break
 

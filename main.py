@@ -153,20 +153,3 @@ while RUNNING:
     Attack.create_threads()
     break
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
