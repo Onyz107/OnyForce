@@ -1,0 +1,12 @@
+certifi==2024.2.2
+charset-normalizer==3.3.2
+colorama==0.4.6
+fake-useragent==1.5.1
+idna==3.6
+prompt-toolkit==3.0.36
+psutil==5.9.8
+PySocks==1.7.1
+questionary==2.0.1
+requests==2.31.0
+urllib3==2.2.1
+wcwidth==0.2.13
