@@ -89,7 +89,7 @@ class Initiate_attack:
 
 
             try:
-                response = requests.post(self.website, data=fields, proxies=proxy, timeout=10, verify=False, headers=get_header_with_random_user_agent())
+                response = requests.post(self.website, data=fields, proxies=proxy, timeout=4, verify=False, headers=get_header_with_random_user_agent())
                 # response = requests.get(self.website, proxies=proxy, timeout=10, verify=False)
                 # print(response.text)
                 # open('website.html', 'w').write(response.text)
