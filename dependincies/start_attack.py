@@ -135,12 +135,11 @@ class Initiate_attack:
                 logging.debug('Checking for timeouts')
                 if self.timeouts and self.run:
                     logging.info(f'{self.BRIGHT}{self.CYAN}[!] Finished with the passwords however there are some passwords that could not have been requested because of timeouts retrying them{self.RESET}')
-
+                    self.__init__(self.tor, self.fields, self.field_to_attack, self.website, self.condition, self.number_of_threads, self.passwords)
                     for password in self.timed_out_passwords:
                         min_queue = min(self.queues, key=lambda q: q.qsize())
                         min_queue.put(password)
-                    self.timed_out_passwords = []
-                    self.timeouts = 0
+
                     continue
 
                 else:
