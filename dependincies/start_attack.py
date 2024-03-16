@@ -91,6 +91,7 @@ class Initiate_attack:
                 # open('website.html', 'w').write(response.text)
             except (requests.Timeout, requests.exceptions.ConnectionError, requests.exceptions.ConnectTimeout):
                 self.timeouts += 1
+                logging.debug(str(password) + 'Timed-out')
                 self.timed_out_passwords.append(password)
                 continue
 
@@ -127,7 +128,7 @@ class Initiate_attack:
                 _ = executor.map(self.make_request, range(self.number_of_threads+1))
 
                 if self.timed_out_passwords:
-                    logging.info(f'\n{self.BRIGHT}{self.CYAN}[!] Finished with the passwords however there are some passwords that could not have been requested because of timeouts retrying them{self.RESET}')
+                    logging.info(f'{self.BRIGHT}{self.CYAN}[!] Finished with the passwords however there are some passwords that could not have been requested because of timeouts retrying them{self.RESET}')
                     for password in self.timed_out_passwords:
                         min_queue = min(self.queues, key=lambda q: q.qsize())
                         min_queue.put(password)
