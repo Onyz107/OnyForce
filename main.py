@@ -84,6 +84,7 @@ while RUNNING:
         continue
 
     url: str = questionary.text('The URL of the form you wish to attack: ').ask()
+    logging.debug('Checking connection to website')
     try:
         if tor:
             response = requests.post(url, data={'Some': 'random', 'data': 'for_testing'}, timeout=10,
