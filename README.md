@@ -1,6 +1,6 @@
 <h2 align="center"><u>OnyForce</u></h2>
 
-![Brute-Force Websites Easily In Pure Python!]([https://raw.githubusercontent.com/Onyz107/OnyForce/master/img/image.png?token=GHSAT0AAAAAACPLDTBCEVSYTDFGJUOLVCICZP2ZEYA](https://raw.githubusercontent.com/Onyz107/OnyForce/master/img/image.png?token=GHSAT0AAAAAACPLDTBCLTYI647PUH3FOSFOZP2ZLWQ))
+![Brute-Force Websites Easily In Pure Python!](https://raw.githubusercontent.com/Onyz107/OnyForce/master/img/image.png?token=GHSAT0AAAAAACPLDTBCLTYI647PUH3FOSFOZP2ZLWQ)
 <h4 align="center"> Brute-Force Websites Easily In Pure Python! </h4>
 
 <p align="center">
