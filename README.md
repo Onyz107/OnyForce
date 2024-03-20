@@ -4,9 +4,9 @@
 <h4 align="center"> Brute-Force Websites Easily In Pure Python! </h4>
 
 <p align="center">
-    <img src="https://img.shields.io/github/stars/Onyz107/https://github.com/Onyz107/OnyForce?style=for-the-badge&color=orange">
-    <img src="https://img.shields.io/github/license/Onyz107/https://github.com/Onyz107/OnyForce?style=for-the-badge&color=blue">
-    <img src="https://img.shields.io/github/issues/Onyz107/https://github.com/Onyz107/OnyForce?style=for-the-badge&color=red">
+    <img src="https://img.shields.io/github/stars/Onyz107/OnyForce?style=for-the-badge&color=orange">
+    <img src="https://img.shields.io/github/license/Onyz107/OnyForce?style=for-the-badge&color=blue">
+    <img src="https://img.shields.io/github/issues/Onyz107/OnyForce?style=for-the-badge&color=red">
 <br>
     <img src="https://img.shields.io/badge/Author-Zeid Asseh-magenta?style=flat-square">
     <img src="https://img.shields.io/badge/Maintained-Yes-cyan?style=flat-square">
