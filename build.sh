@@ -23,7 +23,7 @@ main() {
 
     log "Checking prerequisites..."
     command -v python3 >/dev/null 2>&1 || error "Python3 is not installed"
-    command -v pip >/dev/null 2>&1 || error "pip is not installed"
+    command -v python3 -m pip >/dev/null 2>&1 || error "pip is not installed"
 
     log "Installing lolcat..."
     sudo apt-get install lolcat -y > /dev/null 2>&1 || error "Failed to install lolcat"
