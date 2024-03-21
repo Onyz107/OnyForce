@@ -38,3 +38,9 @@ OnyForce lets you brute-force websites' forms' very fast and easily while still 
  - lolcat
  - Python3
 
+### [+] ToDo
+ - The script currently only works on Linux based operating systems I want to add Windows as well
+
+
+### `[!] Tested On Kali Linux`
+
