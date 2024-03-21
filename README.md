@@ -14,32 +14,33 @@
     <img src="https://img.shields.io/badge/Written%20In-Python-blue?style=flat-square">
 </p>
 
-### [+] Description
+### Description
 OnyForce lets you brute-force websites' forms' very fast and easily while still having a very user-friendly setup and implementation. OnyForce also uses TOR to randomly select IP addresses and use them as proxies while rotating the IP address of each thread every 10 seconds.
 
-### [+] Installation
+### Installation
  - `git clone https://github.com/Onyz107/OnyForce`
  - `cd OnyForce`
  - `chmod +x build.sh`
  - `./build.sh`
 
-### [+] Usage
+### Usage
  - `source OnyForce_venv/bin/activate`
  - `python main.py`
 
-### [+] Features
+### Features
  - Fast
  - Reliable
  - User-Friendly
  - Anonymous
 
-### [+] Requirements
+### Requirements
  - TOR
  - lolcat
  - Python3
 
-### [+] ToDo
+### ToDo
  - The script currently only works on Linux based operating systems I want to add Windows as well
+
 
 
 ### `[!] Tested On Kali Linux`
