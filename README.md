@@ -2,8 +2,6 @@
 
 ![Brute-Force Websites Easily In Pure Python!](https://raw.githubusercontent.com/Onyz107/OnyForce/master/img/image.png)
 <h4 align="center"> Brute-Force Websites Easily In Pure Python! </h4>
-
-
 <br>
     <img src="https://img.shields.io/badge/Author-Zeid Asseh-magenta?style=flat-square">
     <img src="https://img.shields.io/badge/Maintained-Yes-cyan?style=flat-square">
